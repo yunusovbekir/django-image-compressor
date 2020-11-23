@@ -2,3 +2,9 @@
 .idea/
 *.pyc
 *.log
+build/
+dist/
+sdist/
+.eggs/
+*.egg-info/
+.DS_Store
