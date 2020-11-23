@@ -28,7 +28,7 @@ In order to use the compressor, first create a ModelForm in forms.py and add Ima
 ```py
 # forms.py
 from django import forms
-from django-image-compressor.mixins import ImageCompressorFormMixin
+from django_image_compressor.mixins import ImageCompressorFormMixin
 
 class YourImageUploadForm(ImageCompressorFormMixin, forms.ModelForm):
     ...
@@ -43,7 +43,7 @@ If you want to add compressor to your Django Admin Site, then add ImageCompresso
 ```py
 # admin.py
 from django.contrib import admin
-from django-image-compressor.mixins import ImageCompressorAdminMixin
+from django_image_compressor.mixins import ImageCompressorAdminMixin
 
 class YourModelAdmin(ImageCompressorAdminMixin, admin.ModelAdmin):
     ...
