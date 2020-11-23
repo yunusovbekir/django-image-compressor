@@ -1,7 +1,6 @@
 LICENSE
 MANIFEST.in
 README.md
-setup.cfg
 setup.py
 django_image_compressor.egg-info/PKG-INFO
 django_image_compressor.egg-info/SOURCES.txt
