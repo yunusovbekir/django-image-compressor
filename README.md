@@ -1,6 +1,7 @@
 # Django Image Compressor
 
 Django Image Compressor is a tool to compress your images. Easy to plug-in and easy to use.
+The tool compresses the uploaded image before saving data to db.
 
 ### Installation
 
@@ -44,10 +45,11 @@ If you want to add compressor to your Django Admin Site, then add ImageCompresso
 # admin.py
 from django.contrib import admin
 from django_image_compressor.mixins import ImageCompressorAdminMixin
+from .forms.py import YourImageUploadForm
 
 class YourModelAdmin(ImageCompressorAdminMixin, admin.ModelAdmin):
     ...
-    custom_form = SliderCreateForm
+    custom_form = YourImageUploadForm
     ...
 
 ```
