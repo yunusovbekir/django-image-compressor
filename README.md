@@ -37,19 +37,6 @@ class YourImageUploadForm(ImageCompressorFormMixin, forms.ModelForm):
 
 ```
 
-Then add ImageCompressorViewMixin to your Create and/or Update View.
-
-```py
-# views.py
-from django.views.generic import CreateView
-
-class YourImageUploadView(ImageCompressorViewMixin, CreateView):
-    ...
-    compressed_image_fields = ('your_image_field_1', 'your_image_field2', ...)
-    form_class = YourImageUploadForm
-    ...
-
-```
 
 If you want to add compressor to your Django Admin Site, then add ImageCompressorAdminMixin and the created form to your ModelAdmin class.
 
