@@ -80,7 +80,7 @@ Classifier: Environment:: Web Environment
 Classifier: Framework:: Django
 Classifier: Framework:: Django:: 3.1
 Classifier: Intended Audience:: Developers
-Classifier: License:: OSI Approved:: MIT
+Classifier: License:: OSI Approved:: MIT License
 Classifier: License Operating System:: OS Independent
 Classifier: Programming Language:: Python
 Classifier: Programming Language:: Python:: 3
