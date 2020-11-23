@@ -14,7 +14,7 @@ PACKAGES = (
 
 setup(
     name='django-image-compressor',
-    version='0.3',
+    version='0.3.2',
     description="Image compressor for Django apps.",
     long_description_content_type='text/markdown',
     long_description=long_description,
