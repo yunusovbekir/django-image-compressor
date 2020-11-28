@@ -66,7 +66,7 @@ class ImageCompressorFormMixin:
 
             index_field = fields_list.index(field)
             index_field += 1
-            reordered_list = fields_list[:index_field] + additional_fields_list + fields_list[index_field:]
+            reordered_list = fields_list[:index_field] + additional_fields_list + fields_list[index_field:]  # noqa #501
 
             self.fields = {k: self.fields[k] for k in reordered_list}
 
