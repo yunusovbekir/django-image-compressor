@@ -57,7 +57,7 @@ class ImageCompressorFormMixin:
             )
 
             # reordering fields
-            additional_fields_list = [
+            self.additional_fields_list = [
                 reduce_memory_checkbox_field,
                 resize_checkbox_field,
                 width_input_field,
@@ -66,7 +66,7 @@ class ImageCompressorFormMixin:
 
             index_field = fields_list.index(field)
             index_field += 1
-            reordered_list = fields_list[:index_field] + additional_fields_list + fields_list[index_field:]
+            reordered_list = fields_list[:index_field] + self.additional_fields_list + fields_list[index_field:]  # noqa #501
 
             self.fields = {k: self.fields[k] for k in reordered_list}
 
@@ -80,6 +80,10 @@ class ImageCompressorFormMixin:
                     self.start_compression(cleaned_data, temp_folder, field)
 
             remove_tmp_dir(temp_folder)
+
+        for field in self.additional_fields_list:
+            logger.info(f'Extra field {field} is removed from cleaned data')
+            del cleaned_data[field]
 
         return cleaned_data
 
