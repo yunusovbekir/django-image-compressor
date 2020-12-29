@@ -8,3 +8,4 @@ sdist/
 .eggs/
 *.egg-info/
 .DS_Store
+*.sqlite3
